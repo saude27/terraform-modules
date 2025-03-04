@@ -119,7 +119,7 @@ resource "aws_security_group" "database_security_group" {
     to_port     = 0
     protocol    = -1
     cidr_blocks = ["0.0.0.0/0"]
-  }
+ }
 
   tags = {
     Name = "${var.project_name}-${var.environment}-database-sg"
