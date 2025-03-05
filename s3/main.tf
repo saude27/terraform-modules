@@ -11,6 +11,5 @@ resource "aws_s3_bucket" "env_file_bucket" {
 resource "aws_s3_object" "upload_env_file" {
   bucket = aws_s3_bucket.env_file_bucket.id
   key    = var.env_file_name
-  source = "${path.module}/${var.env_file_name}" 
-  etag   = filemd5("${path.module}/${var.env_file_name}")
+  source = "C:/Users/sauda/rentzone-infrastructure-ecs/rentzone.env"
 }
